@@ -1,7 +1,7 @@
 const express = require("express")
 const server = express()
 
-// pegar o banco de dados
+// pegar o banco de dados Mysql
 const db = require("./database/bancomysql.js")
 
 // configurar pasta publica
