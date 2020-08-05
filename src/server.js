@@ -2,7 +2,7 @@ const express = require("express")
 const server = express()
 
 // pegar o banco de dados
-const db = require("./database/db")
+const db = require("./database/bancomysql.js")
 
 // configurar pasta publica
 server.use(express.static("public"))
