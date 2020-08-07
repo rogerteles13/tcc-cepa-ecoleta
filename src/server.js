@@ -1,5 +1,6 @@
 const express = require("express")
 const server = express()
+const bodyParser = require("body-parser")
 
 // pegar o banco de dados Mysql
 const db = require("./database/bancomysql.js")
@@ -9,6 +10,10 @@ server.use(express.static("public"))
 
 // habilitar o uso do req.body na nossa aplicação
 server.use(express.urlencoded({ extended: true }))
+
+//habilitar o bodyparser
+server.use(bodyParser.urlencoded({ extended: false }))
+server.use(bodyParser.json())
 
 
 // utilizando template engine
