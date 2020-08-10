@@ -45,7 +45,7 @@ server.get("/create-point", (req, res) => {
 
 //dados do formuláro para o cadstro
 
-server.post("/savepoint", function(req, res){
+/*server.post("/savepoint", function(req, res){
     bancomysql.create({
         image: req.body.nome,
         name: req.body.valor,
@@ -60,10 +60,10 @@ server.post("/savepoint", function(req, res){
     }).catch(function(erro){
         res.send("Erro de cadastro!" + erro)
     })
-    //res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>") 
-})
+    
+})*/
 
-/*server.post("/savepoint", (req, res) => {
+server.post("/savepoint", (req, res) => {
 
     // req.body: O corpo do nosso formulário
     // console.log(req.body)
@@ -105,7 +105,7 @@ server.post("/savepoint", function(req, res){
 
     db.run(query, values, afterInsertData)
 
-})*/
+})
 
 
 

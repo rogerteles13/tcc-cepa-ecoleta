@@ -4,10 +4,10 @@ const sequelize = new Sequelize("ecoleta", "root", "12345678", {
     dialect: "mysql"
 })
 
-module.exports = {
+/*module.exports = {
     Sequelize: Sequelize,
     sequelize: sequelize
-}
+}*/
 
 /*sequelize.authenticate().then(() => {
     console.log("Conectado com sucesso!")
