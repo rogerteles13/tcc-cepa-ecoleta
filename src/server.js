@@ -2,14 +2,15 @@ const express = require("express")
 const server = express()
 const bodyParser = require("body-parser")
 
+
 // pegar o banco de dados Mysql
-const db = require("./database/bancomysql.js")
+//const create-point = require("./database/db.js")
 
 // configurar pasta publica
 server.use(express.static("public"))
 
 // habilitar o uso do req.body na nossa aplicação
-server.use(express.urlencoded({ extended: true }))
+//server.use(express.urlencoded({ extended: true }))
 
 //habilitar o bodyparser
 server.use(bodyParser.urlencoded({ extended: false }))
@@ -45,8 +46,8 @@ server.get("/create-point", (req, res) => {
 
 //dados do formuláro para o cadstro
 
-/*server.post("/savepoint", function(req, res){
-    bancomysql.create({
+server.post("/savepoint", function(req, res){
+    db.create({
         image: req.body.nome,
         name: req.body.valor,
         address: req.body.valor,
@@ -61,7 +62,7 @@ server.get("/create-point", (req, res) => {
         res.send("Erro de cadastro!" + erro)
     })
     
-})*/
+})
 
 server.post("/savepoint", (req, res) => {
 
