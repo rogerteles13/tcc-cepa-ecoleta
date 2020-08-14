@@ -1,6 +1,6 @@
 const express = require("express")
 const server = express()
-const bodyParser = require("body-parser")
+//const bodyParser = require("body-parser")
 
 
 // pegar o banco de dados Mysql
@@ -10,11 +10,11 @@ const bodyParser = require("body-parser")
 server.use(express.static("public"))
 
 // habilitar o uso do req.body na nossa aplicação
-//server.use(express.urlencoded({ extended: true }))
+server.use(express.urlencoded({ extended: true }))
 
 //habilitar o bodyparser
-server.use(bodyParser.urlencoded({ extended: false }))
-server.use(bodyParser.json())
+//server.use(bodyParser.urlencoded({ extended: false }))
+//server.use(bodyParser.json())
 
 
 // utilizando template engine
@@ -44,7 +44,7 @@ server.get("/create-point", (req, res) => {
     return res.render("create-point.html")
 })
 
-//dados do formuláro para o cadstro
+/*dados do formuláro para o cadstro
 
 server.post("/savepoint", function(req, res){
     db.create({
@@ -106,7 +106,7 @@ server.post("/savepoint", (req, res) => {
 
     db.run(query, values, afterInsertData)
 
-})
+})*/
 
 
 
