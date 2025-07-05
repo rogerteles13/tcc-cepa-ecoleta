@@ -10,19 +10,19 @@ db.serialize(() => {
 
     // com commandos SQL eu vou:
 
-    // // 1 Criar uma tabela 
-    // db.run(`
-    //     CREATE TABLE IF NOT EXISTS places (
-    //         id INTEGER PRIMARY KEY AUTOINCREMENT,
-    //         image TEXT,
-    //         name TEXT,
-    //         address TEXT,
-    //         address2 TEXT,
-    //         state TEXT,
-    //         city TEXT,
-    //         items TEXT
-    //     );
-    // `)
+    // 1 Criar uma tabela 
+    db.run(`
+        CREATE TABLE IF NOT EXISTS places (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            image TEXT,
+            name TEXT,
+            address TEXT,
+            address2 TEXT,
+            state TEXT,
+            city TEXT,
+            items TEXT
+        );
+    `)
 
     // // 2 Inserir dados na tabela
     // const query = `
