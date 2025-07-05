@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    # Constrói a imagem a partir do Dockerfile no diretório atual
+    build: .
+    # Nome do contêiner para fácil identificação
+    container_name: ecoleta_app
+    # Mapeia a porta 3000 do host para a porta 3000 do contêiner
+    ports:
+      - "3000:3000"
+    # Monta um volume para persistir o banco de dados SQLite
+    volumes:
+      - ./src/database:/usr/src/app/src/database
+    # Reinicia o contêiner automaticamente em caso de falha
+    restart: always

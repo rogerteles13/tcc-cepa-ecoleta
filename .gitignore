@@ -1,1 +1,4 @@
 node_modules
+
+# Arquivo do banco de dados SQLite
+/src/database/database.db
