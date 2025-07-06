@@ -48,3 +48,34 @@
         background-position-y: 200px;
     }
 }
+
+/* Ajustes para telas menores como a do Samsung Galaxy M34 */
+@media (max-width: 600px) {
+    /* Página Inicial */
+    #page-home main h1 {
+        font-size: 36px;
+    }
+
+    #page-home main p {
+        font-size: 20px;
+    }
+
+    /* Página de Criação de Ponto */
+    #page-create-point form {
+        padding: 32px;
+    }
+
+    #page-create-point .items-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Página de Resultados da Busca */
+    #page-search-results main {
+        margin: 48px 16px;
+    }
+
+    /* Modal */
+    #modal .content {
+        width: 90%;
+    }
+}
