@@ -1,3 +1,16 @@
+/* =================================== */
+/*  Estilos para telas muito grandes   */
+/* =================================== */
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 40vw;
+    }
+}
+
+/* =================================== */
+/*  Estilos para tablets e desktops    */
+/*  (telas menores que 900px)          */
+/* =================================== */
 @media (max-width: 900px) {
     #page-home {
         background-position-x: 70vw;
@@ -37,19 +50,10 @@
     }
 }
 
-@media (min-width: 1700px) {
-    #page-home {
-        background-position-x: 40vw;
-    }
-}
-
-@media (max-height: 760px) {
-    #page-home {
-        background-position-y: 200px;
-    }
-}
-
-/* Ajustes para telas menores como a do Samsung Galaxy M34 */
+/* =================================== */
+/*  Estilos para telas pequenas        */
+/*  (telas menores que 600px)          */
+/* =================================== */
 @media (max-width: 600px) {
     /* Página Inicial */
     #page-home main h1 {
@@ -77,5 +81,14 @@
     /* Modal */
     #modal .content {
         width: 90%;
+    }
+}
+
+/* =================================== */
+/*  Ajustes baseados na altura da tela */
+/* =================================== */
+@media (max-height: 760px) {
+    #page-home {
+        background-position-y: 200px;
     }
 }
